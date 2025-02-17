@@ -8,7 +8,7 @@ def sensor_to_angle(sensor, k=100.0, mechanical_factor=36000):
     force = sensor * (1023 / 98.1)
     displacement = force / k
     angle_units = int(displacement * mechanical_factor)
-    return angle_units
+    return -angle_units
 
 def main():
     bus = can.Bus(interface='slcan', channel='COM11', bitrate=1e6)
@@ -44,7 +44,6 @@ def main():
                         is_extended_id=False
                     )
                     bus.send(msg)
-                    print(f"Sensor: {sensor}, Angle: {angle}")
                 except ValueError:
                     print(f"Invalid sensor data: {raw_data}")
                         

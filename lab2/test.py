@@ -14,7 +14,7 @@ def send_can_message():
         # Create the CAN message to send
         msg_to_send = can.Message(
             arbitration_id=0x141,
-            data=[0x81, 0, 0, 0, 0, 0, 0],
+            data=[0x19, 0, 0, 0, 0, 0, 0],
             # data=[0xA3, 0, 0, 0, *angle],
             is_extended_id=False
         )
