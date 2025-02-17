@@ -1,0 +1,7 @@
+../Core/Src/main.c:52:6:QuadratureEncoder_Init	1
+../Core/Src/main.c:62:6:QuadratureEncoder_Update	14
+../Core/Src/main.c:104:7:QuadratureEncoder_GetAngle	1
+../Core/Src/main.c:141:5:main	1
+../Core/Src/main.c:208:6:SystemClock_Config	3
+../Core/Src/main.c:254:13:MX_GPIO_Init	1
+../Core/Src/main.c:293:6:Error_Handler	1

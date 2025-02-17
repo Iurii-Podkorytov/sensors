@@ -1,0 +1,7 @@
+../Core/Src/main.c:52:6:QuadratureEncoder_Init	16	static
+../Core/Src/main.c:62:6:QuadratureEncoder_Update	40	static
+../Core/Src/main.c:104:7:QuadratureEncoder_GetAngle	16	static
+../Core/Src/main.c:141:5:main	32	static
+../Core/Src/main.c:208:6:SystemClock_Config	88	static
+../Core/Src/main.c:254:13:MX_GPIO_Init	40	static
+../Core/Src/main.c:293:6:Error_Handler	4	static,ignoring_inline_asm
