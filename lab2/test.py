@@ -4,18 +4,21 @@ import struct
 def send_can_message():
     bus = can.Bus( 
         interface='slcan',
-        channel='COM11',
+        channel='COM6',
         bitrate=1e6,
     )
     
-    angle = struct.pack('<i', 3000)
+    control_bytes = struct.pack('<i', 90*100)
 
     try:
         # Create the CAN message to send
         msg_to_send = can.Message(
             arbitration_id=0x141,
-            data=[0x19, 0, 0, 0, 0, 0, 0],
-            # data=[0xA3, 0, 0, 0, *angle],
+            # data=[0x81, 0, 0, 0, 0, 0, 0, 0],
+            # data=[0xA2, 0, 0, 0, *control_bytes],
+            data=[0xA3, 0, 0, 0, *control_bytes],
+            # data=[0x34, 0, 0, 0, *control_bytes],
+            # data=[0x33, 0, 0, 0, 0, 0, 0, 0],
             is_extended_id=False
         )
         
